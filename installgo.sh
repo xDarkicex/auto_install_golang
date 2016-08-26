@@ -49,7 +49,7 @@ done
   sudo installer -pkg ${PWD}/golang.pkg -target /
   while true
     do
-      read -e -n 1 -p "Where do you want your Go workspace path? [Desktop/Documents] " RESP
+      read -e -n 1 -p "Where do you want your Go workspace path? [Desktop/No] " RESP
       case $RESP in
       [Desktop])
           # env_root_dir=$1
