@@ -1,1 +1,1 @@
-#README golang
+#README golang auto install
