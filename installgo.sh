@@ -53,11 +53,11 @@ func main() {
     fmt.Printf("hello, world\n")
 }" > main.go &&
           Path='$PATH'
-          # cd ~ &&
-#                   echo "export GOROOT=\"/usr/local/go\"
-# export GOPATH=\"$HOME/Desktop/goworkspace\"
-# export PATH=\"$HOME/Desktop/goworkspace/bin:$Path\"" >> .bash_profile &&
-#                   go env;
+          cd ~ &&
+                  echo "export GOROOT=\"/usr/local/go\"
+export GOPATH=\"$HOME/Desktop/goworkspace\"
+export PATH=\"$HOME/Desktop/goworkspace/bin:$Path\"" >> .bash_profile &&
+                  go env;
           cd ${before_workspace} &&
           break;;
         "Documents") echo "Documents stuff"
@@ -91,11 +91,11 @@ func main() {
     fmt.Printf("hello, world\n")
 }" > main.go &&
           Path='$PATH'
-#                   cd ~ &&
-#                   echo "export GOROOT=\"/usr/local/go\"
-# export GOPATH=\"$HOME/Documents/goworkspace\"
-# export PATH=\"$HOME/Documents/goworkspace/bin:$Path\"" >> .bash_profile &&
-#                   go env;
+          cd ~ &&
+          echo "export GOROOT=\"/usr/local/go\"
+export GOPATH=\"$HOME/Documents/goworkspace\"
+export PATH=\"$HOME/Documents/goworkspace/bin:$Path\"" >> .bash_profile &&
+                  go env;
           cd ${before_workspace} &&
           break;;
         esac
