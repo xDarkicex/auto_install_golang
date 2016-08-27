@@ -18,8 +18,8 @@ This tool will also place your goworkspace in the proper location with your git 
 
 NONE CURL will now do everything!
 
-- [] Homebrew
-- [] wget
+- [ ] Homebrew
+- [ ] wget
 
 ###Awesome Addons!!
 
