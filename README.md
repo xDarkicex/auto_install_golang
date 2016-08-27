@@ -25,5 +25,7 @@ NONE CURL will now do everything!
 
 These are great, the homebrew is as close to apt-get as mac osx can get!
 
+http://brew.sh/
+
 - [x] Homebrew
 - [x] wget
