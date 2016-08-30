@@ -157,7 +157,10 @@ function update() {
   Options: [1||2]"
   select opt in "${options[@]}"; do
       case $opt in
-          "Curl") cd ~ && curl -# ${go_url} > $current_dir/golang.pkg &&
+          "Curl")
+          cd ~ &&
+          current_dir=${PWD}
+          curl -# ${go_url} > $current_dir/golang.pkg &&
             sudo installer -pkg ${current_dir}/golang.pkg -target / &&
             workspace_local
             echo "-----------------------------------------------------------------------------------------"

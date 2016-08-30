@@ -52,10 +52,9 @@ go_exists=$(which go)
 if [ -z "$go_exists" ]
  then
   install
-elif [ "${localgo}" == "${urlgo}" ]
+elif [ "${localgo}" == "" ]
  then
   echo "You are on  the most current version of golang ${localgo}"
-
 else
   update
 fi
