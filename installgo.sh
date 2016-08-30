@@ -162,12 +162,14 @@ function update() {
           current_dir=${PWD}
           curl -# ${go_url} > $current_dir/golang.pkg &&
             sudo installer -pkg ${current_dir}/golang.pkg -target / &&
-            workspace_local
+            cd $local_dir
             echo "-----------------------------------------------------------------------------------------"
           break;;
-          "Wget") wget -P ${PWD} -O golang.pkg ${go_url} &&
+          "Wget")
+          cd ~ &&
+          wget -P ${PWD} -O golang.pkg ${go_url} &&
           sudo installer -pkg ${PWD}/golang.pkg -target / &&
-          workspace_local
+          cd $local_dir
           echo "-----------------------------------------------------------------------------------------"
         break;;
       esac
@@ -177,7 +179,7 @@ go_exists=$(which go)
 if [ -z "$go_exists" ]
  then
   install
-elif [ "${localgo}" == "${urlgo}" ]
+elif [ "${localgo}" == "5" ]
  then
   echo "You are on  the most current version of golang ${localgo}"
 
