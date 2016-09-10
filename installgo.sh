@@ -175,6 +175,20 @@ function update() {
       esac
     done
 }
+while true
+  do
+    read -e -n 1 -p "Press Yes to force install Golang fixer [y/N] " RESP
+    case $RESP in
+    [yY])
+    install
+  break
+  ;;
+[nN]|"")
+
+  break
+  ;;
+esac
+done
 go_exists=$(which go)
 if [ -z "$go_exists" ]
  then
