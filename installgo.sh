@@ -25,14 +25,14 @@ urlgo=$(echo $go_url | grep -Eo '\d+?(\.\d+)+?');
 local_dir=${PWD}
 echo "
 ---------------------------------------------------------------------------------------------
-#  Automated Golang installer
-#  ----------------------
-#  | Version #$version     |
-#  ----------------------
-#  By: Gentry Rolofson
-#  More info: https://bitdev.io
-#  Github: @xDarkicex
-#
+#  Automated Golang installer                                                               #
+#  ----------------------                                                                   #
+#  | Version #$version     |                                                                   #
+#  ----------------------                                                                   #
+#  By: Gentry Rolofson                                                                      #
+#  More info: https://bitdev.io                                                             #
+#  Github: @xDarkicex                                                                       #
+#                                                                                           #
 ---------------------------------------------------------------------------------------------
 "
 
@@ -207,6 +207,6 @@ echo "
           -------------------------------------------------------------
           #         *******     congratulations      *******          #
           #                                                           #
-          #         goLang Version $go_version $os installed!      #
+          #         goLang Version $go_version $os installed!              #  
           -------------------------------------------------------------
 "
