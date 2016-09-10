@@ -5,7 +5,7 @@ try() { "$@" || die "cannot $*"; }
 os=$(uname -s)
 # setup panic err control will close setup
 if [ -z $os ]; then die "Panic system does not have uname installed"; fi
-version="2.0.0"
+version="2.2.0"
 options=("Curl" "Wget")
 workspace=("Desktop" "Documents")
 PS3='Please enter your choice: '
