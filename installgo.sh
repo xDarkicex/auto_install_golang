@@ -205,8 +205,8 @@ fi
 go env
 echo "
           -------------------------------------------------------------
-          #         *******     congratulations      *******
-          #
-          #         goLang Version $go_version $os installed!
+          #         *******     congratulations      *******          #
+          #                                                           #
+          #         goLang Version $go_version $os installed!      #
           -------------------------------------------------------------
 "
