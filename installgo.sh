@@ -175,7 +175,8 @@ function update() {
       esac
     done
 }
-echo "Force Update 
+echo "Force update
+Warning Will Put you on Edge Versions of go.
 Options: [1||2]"
 force=("Yes" "No")
     select opt in "${force[@]}"; do
