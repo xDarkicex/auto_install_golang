@@ -175,20 +175,20 @@ function update() {
       esac
     done
 }
-while true
-  do
-    read -e -n 1 -p "Press Yes to force install Golang fixer [y/N] " RESP
-    case $RESP in
-    [yY])
-    install
-  break
-  ;;
-[nN]|"")
-
-  break
-  ;;
-esac
-done
+echo "Force Update 
+Options: [1||2]"
+force=("Yes" "No")
+    select opt in "${force[@]}"; do
+      case $opt in 
+        "Yes")
+        install
+        break
+          ;;
+        "No")
+       break
+         ;;
+    esac
+  done
 go_exists=$(which go)
 if [ -z "$go_exists" ]
  then
@@ -200,6 +200,8 @@ elif [ "${localgo}" == "${urlgo}" ]
 else
   update
 fi
+
+go env
 echo "
           -------------------------------------------------------------
           #         *******     congratulations      *******
