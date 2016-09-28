@@ -70,8 +70,8 @@ fmt.Printf(\"hello, world\n\")
   Path='$PATH'
   cd ~ &&
           echo "export GOROOT=\"/usr/local/go\"
-export GOPATH=\"$HOME/${workspace_dir}/goworkspace\"
-export PATH=\"$HOME/${workspace_dir}/goworkspace/bin:$Path\"" >> .bash_profile &&
+export GOPATH=\"$HOME/${workspace_dir}/goworkspace/src/${username}\"
+export PATH=\"$HOME/${workspace_dir}/goworkspace/bin:${Path}\"" >> .bash_profile &&
           go env;
   cd ${local_dir}
 }
@@ -182,7 +182,7 @@ force=("Yes" "No")
     select opt in "${force[@]}"; do
       case $opt in 
         "Yes")
-        install
+        update
         break
           ;;
         "No")
@@ -194,19 +194,27 @@ go_exists=$(which go)
 if [ -z "$go_exists" ]
  then
   install
+
 elif [ "${localgo}" == "${urlgo}" ]
  then
   echo "You are on  the most current version of golang ${localgo}"
+  go env
 
-else
-  update
-fi
-
-go env
-echo "
+  echo "
           -------------------------------------------------------------
           #         *******     congratulations      *******          #
           #                                                           #
           #         goLang Version $go_version $os installed!              #  
           -------------------------------------------------------------
 "
+
+
+
+  exit 0
+else
+
+## Everything else EXIT 0
+ exit 1
+fi
+
+
